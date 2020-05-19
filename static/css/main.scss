@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+.wrap {
+  width: 90%;
+  height: auto;
+  margin: 0px auto;
+  border: 1px solid rgba(225, 225, 226, 0.8);
+  box-shadow: 0px 0px 10px #ccc;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  min-height: 600px;
+  #header {
+    display: flex;
+    height: 120px;
+    flex-direction: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid rgba(225, 225, 226, 0.8);
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
+      margin-left: 50px;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 35px;
+    }
+    #menu {
+      flex-grow: 1;
+      flex-basis: 30%;
+      height: 100%;
+      padding-right: 10px;
+
+      ul {
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        list-style: none;
+        a {
+          text-transform: uppercase;
+          color: #444;
+          padding: 15px;
+          transition: all 300ms;
+          &:hover {
+            background: #ccc;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  section {
+    h1 {
+      text-align: center;
+    }
+    form {
+      margin-left: 44%;
+      height: 150px;
+      line-height: 40px;
+    }
+    input[type="text"] {
+      border: 1px solid #c9c9c9;
+      box-shadow: 0px 0px 2px #ccc inset;
+      background: white;
+      padding: 1px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      color: grey;
+      transition: all 300ms;
+    }
+    input[type="text"]:focus {
+      border: 1px solid #70b231;
+      color: black;
+    }
+
+    input[type="submit"],
+    button {
+      display: block;
+      border-radius: 2px;
+      border: 1px solid green;
+      margin-left: 157px;
+      width: 60px;
+      padding: 3px;
+      color: white;
+      background-color: #70b231;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover,
+    button:hover {
+      box-shadow: 0px 0px 2px gray;
+    }
+    input[type="submit"]:active,
+    button:active {
+      box-shadow: 0px 0px 3px gray inset;
+      text-shadow: 0px 0px 1px #ccc;
+    }
+    article {
+      height: 55%;
+      width: 80%;
+      padding: 10px;
+      border: 1px solid rgba(225, 225, 226, 0.8);
+      box-shadow: 0px 0px 10px #ccc;
+      margin-left: 211px;
+      p {
+        justify-content: center;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

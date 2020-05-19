@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <header id="header">
+            <h1>Hola claudio! </h1>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">Item1</a></li>
+                    <li><a href="#">Item2</a></li>
+                    <li><a href="#">Item3</a></li>
+                    <li><a href="#">Item4</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h1>Calculador</h1>
+
+            <form method="post">
+                <label for="">Ingresa una ecuacion</label>
+                <input type="text" name="expression" placeholder="ej: 8*x +6" />
+                <input type="submit" value="submit" />
+                <div>
+                    La respuesta es:
+                    {% if result1 != None %}
+                    {{ result1 }}
+                    {% endif %}
+                </div>
+            </form>
+
+            <article id="article">
+                <p>
+                    1. - Asegurate de poner espacios entre operadores. Por ejemplo: 8*x + 6
+                </p><br>
+                <p> 2.- Usa ** en vez de ^ para elevar. </p>
+                <br>
+                <p> 3. - Usa sqrt para encontrar la raiz de un numero</p><br>
+                <p> 4.- Usa Expand para simplificar una expresion, por ejemplo: expand((x + 2)*(x - 3))
+                    lo que te da: x**2−x−6
+                </p>
+                <br>
+                <p>5.- Usa solve para resolver ecuaciones cuadraticas como:solve(x**2 + x + 1)
+                    lo que te devuelve : [-1/2 - sqrt(3)*I/2, -1/2 + sqrt(3)*I/2]  </p>
+                <br>
+                <p>6.- Para factorizar usa factor: factor(x**3 - x**2 + x - 1)), results: (x - 1)*(x**2 + 1</p>
+            </article>
+
+        </section>
+    </div>
+
+
+</body>
+
+</html>
